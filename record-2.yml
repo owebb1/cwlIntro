@@ -1,5 +1,6 @@
 dependent_parameters:
   itemA: one
   itemB: two
+  itemD: seven
 exclusive_parameters:
-  itemD: four
+  itemE: four

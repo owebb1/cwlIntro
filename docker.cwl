@@ -1,5 +1,8 @@
+#Version and Class the same
 cwlVersion: v1.0
 class: CommandLineTool
+
+#different baseCommand ??what is it used for??
 baseCommand: node
 hints:
   DockerRequirement:

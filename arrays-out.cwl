@@ -1,6 +1,6 @@
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: touch
+baseCommand: touch   #will cause the command to originally touch certain files
 inputs:
   touchfiles:
     type:
@@ -14,4 +14,5 @@ outputs:
       type: array
       items: File
     outputBinding:
-      glob: "*.txt"
+      #baz or foo are the two that will have outputs bc they have the .txt
+      glob: "*.txt" #will fill in with any files described that fit the description

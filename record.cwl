@@ -5,6 +5,7 @@ inputs:
     type:
       type: record
       name: dependent_parameters
+      #can put as many as you would like
       fields:
         itemA:
           type: string
@@ -14,7 +15,13 @@ inputs:
           type: string
           inputBinding:
             prefix: -B
+        itemD:
+          type: string
+          inputBinding:
+            prefix: -D
+
   exclusive_parameters:
+  #these will stop after one of them hits
     type:
       - type: record
         name: itemC
@@ -24,14 +31,17 @@ inputs:
             inputBinding:
               prefix: -C
       - type: record
-        name: itemD
+        name: itemE
         fields:
-          itemD:
+          itemE:
             type: string
             inputBinding:
-              prefix: -D
+              prefix: -E
+
 outputs:
   example_out:
     type: stdout
+
+#seems to be kind of the default output because makes it easy with a few lines of code
 stdout: output.txt
 baseCommand: echo

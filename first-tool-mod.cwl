@@ -17,4 +17,6 @@ inputs:
       position: 1
 
 #describes the output of the tool
-outputs: [] #empty list because no formal output
+outputs:
+  echo_out:
+    type: stdout
